@@ -7,7 +7,26 @@ Focused on high productivity.
 
 Feel free to use, share or suggest.
 
-Heavily inspired on [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles) and [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
+Heavily inspired on:
+- [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)
+- [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
+- EndeavourOS i3wm config files
+
+> [!NOTE]
+> Some configurations suppose you are using EndeavourOS i3wm edition.
+> Those must be manually reviewd and changed to your desired system.
+
+## Dependencies
+
+### Neovim dependencies
+
+- Packer
+- Ripgrep
+- Xclip
+
+### i3 dependencies
+
+- JetBrainsMonoNL Nerd Font installed
 
 ## Installation
 
