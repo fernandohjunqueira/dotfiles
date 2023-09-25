@@ -40,3 +40,10 @@ ln -s <source> <destination>
 
 > [!IMPORTANT]
 > Make sure you type absolute paths for `source` and `destination` to avoid problems.
+
+
+## Configuration
+
+### `mimeapps.list`
+
+[This link](https://wiki.archlinux.org/title/XDG_MIME_Applications) might help.
