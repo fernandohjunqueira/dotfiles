@@ -61,4 +61,7 @@ return require("packer").startup(function(use)
 
   -- Game to practice vim motions
   use "theprimeagen/vim-be-good";
+
+  -- To compile LaTeX files
+  use "lervag/vimtex"
 end)

@@ -11,6 +11,7 @@ lsp.ensure_installed({
   --'prettierd',      -- Prettier
   --'shellcheck',     -- Bash
   'volar',          -- Vue
+  -- 'texlab',         -- LaTeX
 });
 
 -- Fix Undefined global 'vim'
