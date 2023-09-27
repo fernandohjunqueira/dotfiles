@@ -2,10 +2,10 @@
 
 # TODO: This should be moved to a config file
 directories=(
-  "$HOME/dotfiles"
   "$HOME/Projects"
   "$HOME/Projects/Work"
   "$HOME/Projects/Personal"
+  "$HOME/Projects/University"
 )
 
 if [[ $# -eq 1 ]]; then
