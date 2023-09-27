@@ -1,1 +1,5 @@
+# Compiled plugins from Packer
 nvim/plugin/packer_compiled.lua
+
+# My personal config files
+.config/*.conf

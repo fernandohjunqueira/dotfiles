@@ -1,0 +1,13 @@
+# In this file, you should list all directories that tmux-sessionizer
+# will look for content.
+
+# The search has depth of 1, so, if you would like to search nested directories,
+# you should list them as well.
+
+SESSIONIZER_DIRECTORIES=(
+  "$HOME/Projects"
+  "$HOME/Projects/Work"
+  "$HOME/Projects/Personal"
+  "$HOME/Projects/University"
+  "$HOME/Documents"
+)
