@@ -105,5 +105,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+addToPath() {
+  if [[ ${PATH} != *"$1"* ]]; then
+    export PATH=$1:$PATH
+  fi
+}
+
+addToPath "$HOME/.local/bin"
+
+# <C-f> runs tmux-sessionizer
+# TODO: Should this line be here?
+bindkey -s ^f "tmux-sessionizer\n"
+
+
 # Open files in default application
 alias open=xdg-open
