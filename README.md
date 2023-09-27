@@ -3,18 +3,23 @@
 Neovim, i3, tmux and zsh.
 
 Basic setup for my personal use.
-Focused on high productivity.
+Focused on productivity.
 
 Feel free to use, share or suggest.
 
-Heavily inspired on:
-- [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)
+Heavily inspired by:
+- [ThePrimeagen's dotfiles](https://github.com/ThePrimeagen/.dotfiles)
 - [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 - EndeavourOS i3wm config files
+- [The Missing Semester](https://missing.csail.mit.edu/)
 
-> [!NOTE]
-> Some configurations suppose you are using EndeavourOS i3wm edition.
-> Those must be manually reviewd and changed to your desired system.
+I am using EndeavourOS i3wm edition.
+It's not guaranteed these files will work on every computer.
+
+## Documentation
+
+- [tmux-sessionizer](docs/tmux-sessionizer.md): fuzzyfind your directories and
+create a tmux session for each.
 
 ## Dependencies
 
