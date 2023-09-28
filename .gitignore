@@ -3,3 +3,6 @@ nvim/plugin/packer_compiled.lua
 
 # My personal config files
 .config/*.conf
+
+# Ignore obsidian files for visualizing docs
+.obsidian
