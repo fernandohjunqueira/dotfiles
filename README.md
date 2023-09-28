@@ -18,12 +18,15 @@ It's not guaranteed these files will work on every computer.
 
 ## Documentation
 
-- [neovim](docs/neovim.md): the best code editor. Take a look at
+- WIP [neovim](docs/neovim.md): the best code editor. Take a look at
 [this file](docs/neovim.md) to check which plugins and remaps
 I've set and how to use them.
+- WIP tmux
+- WIP i3wm
+- WIP zsh
 - [tmux-sessionizer](docs/tmux-sessionizer.md): fuzzyfind your directories and
 create a tmux session for each.
-- mkcd: create a directory and cd to it in one command.
+- WIP mkcd: create a directory and cd to it in one command.
 
 ## Dependencies
 
