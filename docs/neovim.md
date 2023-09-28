@@ -1,6 +1,6 @@
 # Neovim
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > This file is a WORK IN PROGRESS.
 
 ## Plugins
