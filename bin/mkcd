@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# Creates a new directory and enters it
-
-mkcd() {
-  mkdir "$1"
-  cd "$1"
-}
