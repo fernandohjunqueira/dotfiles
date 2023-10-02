@@ -120,3 +120,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 # Open files in default application
 alias open=xdg-open
+
+# kw
+export fpath=(/home/fernando/.local/lib/kw $fpath)
+autoload compinit && compinit -i

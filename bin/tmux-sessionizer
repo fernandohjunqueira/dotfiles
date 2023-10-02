@@ -28,4 +28,4 @@ tmux-sessionizer() {
   tmux switch-client -t "$selected_name"
 }
 
-tmux-sessionizer
+tmux-sessionizer "$@"
