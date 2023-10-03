@@ -124,3 +124,8 @@ alias open=xdg-open
 # kw
 export fpath=(/home/fernando/.local/lib/kw $fpath)
 autoload compinit && compinit -i
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
