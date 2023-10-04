@@ -1,17 +1,30 @@
 return {
   -- Pensing gitsigns.nvim
   "theprimeagen/vim-be-good", -- Game to practice Vim motions
-  "lervag/vimtex", -- LaTeX compilation
+  "lervag/vimtex",            -- LaTeX compilation
   {
     "numToStr/Comment.nvim",
-    lazy=false,
+    lazy = false,
     config = true,
   },
   {
     "mbbill/undotree",
     config = function()
-      vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, {desc = "[U]ndotree Toggle"})
+      vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "[U]ndotree Toggle" })
     end
   },
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {}
+  },
+
+  -- Provisory use of prettier below (due to archive of null-ls)
+  {
+    "MunifTanjim/prettier.nvim",
+    dependencies = {
+      "jose-elias-alvarez/null-ls.nvim"
+    },
+    opts = { bin = "prettierd" },
+  },
 }
