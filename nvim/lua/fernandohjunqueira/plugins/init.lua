@@ -32,5 +32,5 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {},
   },
-  {'akinsho/toggleterm.nvim', version = "*", opts={open_mapping = [[<c-\>]],}},
+  {'akinsho/toggleterm.nvim', version = "*", opts={open_mapping = [[<c-\>]], direction="float"}},
 }
