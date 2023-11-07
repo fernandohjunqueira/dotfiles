@@ -124,6 +124,9 @@ addToPath "$HOME/.local/bin"
 # TODO: Should this line be here?
 bindkey -s ^f "tmux-sessionizer\n"
 
+# <C-n> opens Neovim in current directory
+bindkey -s ^n "nvim .\n"
+
 
 # Open files in default application
 alias open=xdg-open
