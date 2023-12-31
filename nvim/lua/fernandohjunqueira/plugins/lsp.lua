@@ -1,41 +1,4 @@
 return {
-  {
-    'williamboman/mason.nvim',
-    lazy = false,
-    config = true,
-  },
-
-  -- Autocompletion
-  {
-    'hrsh7th/nvim-cmp',
-    event = 'InsertEnter',
-    dependencies = {
-      { 'L3MON4D3/LuaSnip' },
-      { 'saadparwaiz1/cmp_luasnip' }
-    },
-    config = function()
-      -- Here is where you configure the autocompletion settings.
-      -- And you can configure cmp even more, if you want to.
-      local cmp = require('cmp')
-      local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
-      cmp.setup({
-        sources = {
-          { name = 'path' },
-          { name = 'nvim_lsp' },
-          { name = 'nvim_lua' },
-        },
-        mapping = cmp.mapping.preset.insert({
-          ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-          ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-          ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-          ['<C-Space>'] = cmp.mapping.complete(),
-          ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-d>'] = cmp.mapping.scroll_docs(4),
-        })
-      })
-    end
-  },
 
   -- LSP
   {
@@ -43,8 +6,17 @@ return {
     cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
-      { 'hrsh7th/cmp-nvim-lsp' },
+      -- Automatically install LSPs to stdpath for neovim
+      -- { 'hrsh7th/cmp-nvim-lsp' },
+      { 'williamboman/mason.nvim', opts={}, lazy=false },
       { 'williamboman/mason-lspconfig.nvim' },
+
+      -- Useful status updates for LSP
+      { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
+
+      -- Additional lua configuration, makes nvim stuff amazing!
+      {'folke/neodev.nvim', opts={}},
+
     },
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {
@@ -92,10 +64,49 @@ return {
             require("lspconfig")[server_name].setup {}
           end,
           -- lua_ls = function()
-          -- require('lspconfig').lua_ls.setup()
-          -- end,
-        }
+            -- require('lspconfig').lua_ls.setup()
+            -- end,
+          }
+        })
+      end
+    },
+  -- Autocompletion
+  {
+    'hrsh7th/nvim-cmp',
+    event = 'InsertEnter',
+    dependencies = {
+      -- Snippet Engine & its associated nvim-cmp source
+      'L3MON4D3/LuaSnip',
+      'saadparwaiz1/cmp_luasnip',
+
+      -- Adds LSP completion capabilities
+      'hrsh7th/cmp-nvim-lsp',
+
+      -- Adds a number of user-friendly snippets
+      'rafamadriz/friendly-snippets',
+    },
+    config = function()
+      -- Here is where you configure the autocompletion settings.
+      -- And you can configure cmp even more, if you want to.
+      local cmp = require('cmp')
+      local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
+      cmp.setup({
+        sources = {
+          { name = 'path' },
+          { name = 'nvim_lsp' },
+          { name = 'nvim_lua' },
+        },
+        mapping = cmp.mapping.preset.insert({
+          ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+          ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+          ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+          ['<C-Space>'] = cmp.mapping.complete(),
+          ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+          ['<C-d>'] = cmp.mapping.scroll_docs(4),
+        })
       })
     end
-  }
+  },
+
 }

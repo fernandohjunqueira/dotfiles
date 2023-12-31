@@ -22,7 +22,7 @@
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: Geist Mono Regular 10
+font pango: Liga SFMono Nerd Font Regular 10
 
 # set the mod key to the winkey:
 set $mod Mod4
@@ -329,6 +329,7 @@ assign [class="thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws5
 assign [class="Slack"] $ws5
 assign [class="(?i)firefox"] $ws6
+assign [class="mattermost-desktop"] $ws7
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Xfce4-terminal] focus
@@ -336,6 +337,7 @@ for_window [class=(?i)firefox] focus
 for_window [class=(?i)librewolf] focus
 for_window [class=Thunar] focus
 for_window [class=obsidian] focus
+for_window [class=mattermost-desktop] focus
 
 ##############
 # compositor #
@@ -361,10 +363,10 @@ for_window [class=obsidian] focus
 # For modifications, it can be copied to ~/.config/picom/picom.conf or ~/.config/picom.conf
 # install picom package (yay -S picom)
 # start using default config 
-#exec_always --no-startup-id picom -b
+# exec_always --no-startup-id picom -b
 #
 # for custom config:
-#exec_always --no-startup-id picom --config  ~/.config/picom.conf
+# exec_always --no-startup-id picom --config  ~/.config/picom.conf
 
 #############################################
 # autostart applications/services on login: #
@@ -509,7 +511,7 @@ client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 bar {
-		font pango: Geist Mono Regular 11
+		font pango: Liga SFMono Nerd Font Regular 11
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	    	position bottom
 #	    	i3bar_command i3bar --transparency

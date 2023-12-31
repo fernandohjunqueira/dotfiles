@@ -3,9 +3,7 @@ return {
   "theprimeagen/vim-be-good", -- Game to practice Vim motions
   "lervag/vimtex",            -- LaTeX compilation
   {
-    "numToStr/Comment.nvim",
-    lazy = false,
-    config = true,
+    "numToStr/Comment.nvim", opts={}
   },
   {
     "mbbill/undotree",
@@ -33,4 +31,7 @@ return {
     opts = {},
   },
   {'akinsho/toggleterm.nvim', version = "*", opts={open_mapping = [[<c-\>]], direction="float"}},
+
+  -- Useful plugin to show you pending keybinds.
+  { 'folke/which-key.nvim', opts = {} },
 }
